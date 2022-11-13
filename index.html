@@ -19,6 +19,7 @@
     <h2>My Course Goal</h2>
     <p>{{ finishCourse }}</p> <!-- interpolation -->
     <p>Learn more <a v-bind:href="aboutVueLink">about vue</a></p> <!-- v-bind used when want to set value on HTML tag -->
+    <p>{{ outputGoal() }}</p> <!-- Methods allows us to define what should execute when we call that method or for any action event -->
   </section>
 </body>
 
