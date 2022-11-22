@@ -2,16 +2,18 @@ const app = Vue.createApp({
     data() {
         return {
             finishCourse: 'Need to Finish Vue Course',
-            aboutVueLink: 'https://vuejs.org/'
+            aboutVueLink: 'https://vuejs.org/',
+            courseGoal1: 'Learn Vue1!', // these will acts as the global object, we can access in the method by 'this' keyword
+            courseGoal2: 'Master Vue2!',
         };
     },
     methods: {
         outputGoal() {
             const randNum = Math.random();
             if (randNum < 0.5)
-                return 'Learn Vue!'
+                return this.courseGoal1  //we can access global object by 'this' keyword
             else
-                return 'Master Vue!'
+                return this.courseGoal2
         }
     }
 });
